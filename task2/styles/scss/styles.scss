@@ -1,0 +1,86 @@
+body {
+    background-color: blue;
+    margin: 0;
+background-image: url("/img/town.png");
+background-size: cover;
+height: 100vh;
+background-repeat: no-repeat;
+}
+ 
+@keyframes skating {
+  0% {
+    left: 60vw;
+    transform: rotateY(0deg);
+  }
+  49% {
+    transform: rotateY(0deg);
+  }
+  50% {
+   left: 40vw;
+    transform: rotateY(180deg);
+  }
+  99% {
+    transform: rotateY(180deg);
+  }
+  100% {
+    left: 60vw;
+    transform: rotateY(0deg);
+  }
+}
+
+.ice-skating {  
+  position: absolute;
+  height: 100px;
+  left: 60vw;
+  top: 75vh;
+  animation: skating 5s infinite linear;
+}
+
+
+@keyframes snowboarding {
+  0% {
+    transform: rotateY(180deg);
+  }
+  100% {
+    top: 40vh;
+    left: 12vw;
+    transform: rotateY(180deg);
+  }
+ 
+}
+.snowboard{
+  position: absolute;
+  height: 80px;
+  top: 8vh;
+  left: 2vw;
+  animation: snowboarding 2s infinite linear;
+}
+
+
+@keyframes textlight {
+from {
+  color: white;
+text-shadow: 0 0 10px #f5f0f0, 0 0 20px #101010, 0 0 30px #101010, 0 0 40px #101010, 0 0 50px #9052ad, 0 0 60px #9052ad, 0 0 70px #9052ad;
+}
+to {
+  color: red;
+text-shadow: 0 0 20px #f5f0f0, 0 0 30px #f54da1, 0 0 40px #f54da1, 0 0 50px #f54da1, 0 0 60px #f54da1, 0 0 70px #f54da1, 0 0 80px #f54da1;
+}
+}
+.text {
+  position: absolute;
+  font-size: 44px;
+  left: 38vw;
+  top: 18vh;
+animation: textlight 1s ease-in-out infinite alternate;
+}
+
+@keyframes snow {
+ 0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+ 100% {background-position:  400px 400px, 300px 300px;}
+}
+.wrapper {
+   background-image: url('/img/snow1.png'), url('/img/snow2.png'), url('/img/snow3.png');
+ height:100vh;
+ animation: snow 25s linear infinite;
+}
